@@ -1,0 +1,436 @@
+/*
+Theme Name: Worthy - Free Powerful Theme by HtmlCoder
+Author:HtmlCoder
+Author URI:http://www.htmlcoder.me
+Version:1.0.0
+Created:November 2014
+License: Creative Commons Attribution 3.0 License (https://creativecommons.org/licenses/by/3.0/)
+File Description: Place here your custom CSS styles
+*/
+
+/* Layout
+----------------------------------------------------------------------------- */
+img {
+	width: 100%;
+}
+
+#main {
+	background-image: url(/assets/images/hki-skyline.svg);
+	background-repeat: repeat no-repeat;
+	background-position: 0 top;
+	background-size: 220px;
+	padding-top: 40px;
+}
+
+@media (min-width: 768px) {
+	
+	.main-navigation .navbar-default ul.dropdown-menu {
+		padding:0;
+		margin:0;
+		border:0;
+		top:92px;
+		left:22px;
+		border-top:3px solid #55ACEE;
+		-webkit-box-shadow: 0 0 0 0 rgba(0,0,0,0);
+		-moz-box-shadow: 0 0 0 0 rgba(0,0,0,0);
+		box-shadow: 0 0 0 0 rgba(0,0,0,0);
+	}
+
+	.fixed-header-on .main-navigation .navbar-default ul.dropdown-menu {
+		top:66px;
+	}
+
+	.main-navigation .navbar-default ul.dropdown-menu .sub-menu
+	.main-navigation.fixed .navbar-default ul.dropdown-menu .sub-menu {
+		left: 100%;
+		position: absolute;
+		top: 0;
+		visibility: hidden;
+		margin-top: -1px;
+	}
+
+	.main-navigation.fixed .navbar-default ul.dropdown-menu  {
+		margin-top:-12px;
+	}
+
+	.main-navigation .navbar-default ul.dropdown-menu li,
+	.main-navigation.fixed .navbar-default ul.dropdown-menu li {
+		padding:0;
+		margin:0;
+		height:50px;
+	}
+
+	.main-navigation .navbar-default ul.dropdown-menu li a,
+	.main-navigation.fixed .navbar-default ul.dropdown-menu li a {
+		background:#343838 !important;
+		border:1px solid #595959 !important;
+		border-top:1px solid #404040 !important;
+		border-bottom:1px solid #595959 !important;
+		height:0;
+		padding:24px 10px 24px 10px;
+		margin:0;
+		font-size:12px;
+		font-weight:100;
+		font-family:"Lato", sans-serif;
+		color:rgba(255,255,255,.65) !important;
+		line-height:0;
+	}
+
+	.main-navigation .navbar-default ul.dropdown-menu li:hover a,
+	.main-navigation.fixed .navbar-default ul.dropdown-menu li:hover a {
+		background:#6ebff3 				!important;
+		border:1px solid #64b7ec 		!important;
+		color:#fff 						!important;
+	}
+
+	.main-navigation .navbar-default ul.dropdown-menu li:first-child:hover a,
+	.main-navigation.fixed .navbar-default ul.dropdown-menu li:first-child:hover a {
+		border-top:1px solid #6ebff3 !important;
+	}
+
+	.main-navigation .navbar-default ul i.fa {
+		margin-left:8px;	
+	}
+
+	.dropdown.h:hover .dropdown-menu {
+		display: block;
+	}
+
+	.main-navigation .navbar-default ul.navbar-nav li.active a, .main-navigation .navbar-default ul.navbar-nav li:hover a {
+		/*background: transparent none repeat scroll 0% 0%;*/
+		color: #55ACEE;
+	}	
+}
+
+footer {
+	/*background-color: #343838;*/
+	background-color: #55ACEE;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	padding: 55px 50px;
+	color: #fff;
+}
+footer[role="contentinfo"] nav ul li {
+	display: inline;
+	margin: 0 10px 0 0;
+	padding: 0 10px 0 0;
+	font-weight: bold;
+	/*border-right: 1px solid #ccc;*/
+}
+footer h5 {
+	color: #fff;
+}
+footer[role="contentinfo"] nav ul li a {
+	text-decoration: none;
+	color: #fff;
+}
+footer[role="contentinfo"] address a {
+	text-decoration: none;	
+	color: #fff;
+}
+footer[role="contentinfo"] nav ul li:last-child {
+	margin: 0;
+	padding: 0;
+	/*border: none;*/
+}
+footer[role="contentinfo"] p a, footer[role="contentinfo"] p a:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+
+.trademark img.trademark-logo {
+	margin: 0 10px 0 0;
+	padding: 0 10px 0 0;
+	display: inline;
+	width: auto;
+	height: 60px;
+}
+
+.cd-top {
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	position: fixed;
+	bottom: 40px;
+	right: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+	/* image replacement properties */
+	overflow: hidden;
+	text-indent: 100%;
+	white-space: nowrap;
+	background: rgba(232, 98, 86, 0.8) url(/assets/images/cd-top-arrow.svg) no-repeat center 50%;
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: opacity .3s 0s, visibility 0s .3s;
+	-moz-transition: opacity .3s 0s, visibility 0s .3s;
+	transition: opacity .3s 0s, visibility 0s .3s;
+}
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+	-webkit-transition: opacity .3s 0s, visibility 0s 0s;
+	-moz-transition: opacity .3s 0s, visibility 0s 0s;
+	transition: opacity .3s 0s, visibility 0s 0s;
+}
+.cd-top.cd-is-visible {
+	/* the button becomes visible */
+	visibility: visible;
+	opacity: 1;
+}
+.cd-top.cd-fade-out {
+	/* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+	opacity: .5;
+}
+.no-touch .cd-top:hover {
+	background-color: #e86256;
+	opacity: 1;
+}
+@media only screen and (min-width: 768px) {
+	.cd-top {
+		right: 20px;
+		bottom: 20px;
+	}
+}
+@media only screen and (min-width: 1024px) {
+	.cd-top {
+		height: 50px;
+		width: 50px;
+		right: 30px;
+		bottom: 30px;
+	}
+}
+
+/* Typography
+----------------------------------------------------------------------------- */
+li b {
+	color: #339BEB;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/* Caption effect
+----------------------------------------------------------------------------- */
+.grid figure {
+	position: relative;
+	overflow: hidden;
+	background: #3085a3;
+	text-align: center;
+	cursor: pointer;
+}
+.grid figure img {
+	opacity: 0.8;
+}
+.grid figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+}
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+.grid figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+.grid figure h2 span {
+	font-weight: 800;
+}
+.grid figure h2,
+.grid figure p {
+	margin: 0;
+}
+.grid figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+/*---------------*/
+/***** Marley *****/
+/*---------------*/
+
+figure.effect-marley figcaption {
+	text-align: right;
+}
+
+figure.effect-marley h2,
+figure.effect-marley p {
+	position: absolute;
+	right: 30px;
+	left: 30px;
+	padding: 10px 0;
+}
+
+
+figure.effect-marley p {
+	bottom: 30px;
+	line-height: 1.5;
+	-webkit-transform: translate3d(0,100%,0);
+	transform: translate3d(0,100%,0);
+}
+
+figure.effect-marley h2 {
+	top: 30px;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,20px,0);
+	transform: translate3d(0,20px,0);
+}
+
+figure.effect-marley:hover h2 {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+figure.effect-marley h2::after {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background: #fff;
+	content: '';
+	-webkit-transform: translate3d(0,40px,0);
+	transform: translate3d(0,40px,0);
+}
+
+figure.effect-marley h2::after,
+figure.effect-marley p {
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-marley:hover h2::after,
+figure.effect-marley:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+/* Carousel quote
+----------------------------------------------------------------------------- */
+
+/* carousel */
+#quote-carousel 
+{
+	padding: 0 10px 30px 10px;
+	margin-top: 30px;
+}
+
+/* Control buttons  */
+#quote-carousel .carousel-control
+{
+	background: none;
+	color: #222;
+	font-size: 2.3em;
+	text-shadow: none;
+	margin-top: 30px;
+}
+/* Previous button  */
+#quote-carousel .carousel-control.left 
+{
+	left: -12px;
+}
+/* Next button  */
+#quote-carousel .carousel-control.right 
+{
+	right: -12px !important;
+}
+/* Changes the position of the indicators */
+#quote-carousel .carousel-indicators 
+{
+	right: 50%;
+	top: auto;
+	bottom: 0px;
+	margin-right: -19px;
+}
+/* Changes the color of the indicators */
+#quote-carousel .carousel-indicators li 
+{
+	background: #c0c0c0;
+}
+#quote-carousel .carousel-indicators .active 
+{
+	background: #333333;
+}
+#quote-carousel img
+{
+	width: 250px;
+	height: 100px
+}
+/* End carousel */
+
+.item blockquote {
+	border-left: none; 
+	margin: 0;
+}
+
+.item blockquote img {
+	margin-bottom: 10px;
+}
+
+.item blockquote p:before {
+	content: "\f10d";
+	font-family: 'Fontawesome';
+	float: left;
+	margin-right: 10px;
+}
+
+
+
+/**
+  MEDIA QUERIES
+  */
+
+  /* Small devices (tablets, 768px and up) */
+  @media (min-width: 768px) { 
+  	#quote-carousel 
+  	{
+  		margin-bottom: 0;
+  		padding: 0 40px 30px 40px;
+  	}
+  	
+  }
+
+  /* Small devices (tablets, up to 768px) */
+  @media (max-width: 768px) { 
+  	
+  	/* Make the indicators larger for easier clicking with fingers/thumb on mobile */
+  	
+  	#quote-carousel .carousel-indicators {
+  		bottom: -20px !important;  
+  	}
+  	#quote-carousel .carousel-indicators li {
+  		display: inline-block;
+  		margin: 0px 5px;
+  		width: 15px;
+  		height: 15px;
+  	}
+  	#quote-carousel .carousel-indicators li.active {
+  		margin: 0px 5px;
+  		width: 20px;
+  		height: 20px;
+  	}
+  }
